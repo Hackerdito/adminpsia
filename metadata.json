@@ -1,0 +1,5 @@
+{
+  "name": "PSIA Admin Panel",
+  "description": "A modern, secure admin dashboard for managing users and viewing analytics with Apple-style aesthetics.",
+  "requestFramePermissions": []
+}
