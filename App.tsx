@@ -22,7 +22,14 @@ const App: React.FC = () => {
   // Super Admin Mode State
   const [superAdminMode, setSuperAdminMode] = useState(false);
   const [verifyingSuperAdmin, setVerifyingSuperAdmin] = useState(false);
-  const SUPER_ADMIN_EMAIL = 'gerardo.rodriguez@kuepa.com';
+  
+  // --- CONFIGURACIÓN DE SUPER ADMINS ---
+  // Agrega aquí los correos que quieres que tengan acceso a la Zona Admin (Crear/Borrar Admins)
+  const SUPER_ADMIN_EMAILS = [
+    'gerardo.rodriguez@kuepa.com',
+    'gerito.diseno@gmail.com' ,
+    'gerardo.diseno@ukuepa.com'
+  ];
 
   // Data State
   const [usersData, setUsersData] = useState<UserData[]>([]);
@@ -159,7 +166,7 @@ const App: React.FC = () => {
       
       const result = await signInWithPopup(auth, provider);
       
-      if (result.user.email === SUPER_ADMIN_EMAIL) {
+      if (result.user.email && SUPER_ADMIN_EMAILS.includes(result.user.email)) {
         setSuperAdminMode(true);
         setVerifyingSuperAdmin(false);
         setActiveTab('users'); // Go to users view in admin mode
@@ -360,7 +367,7 @@ const App: React.FC = () => {
                </div>
                <div>
                  <h1 className="text-3xl font-bold tracking-tight text-white">Gestión de Administradores</h1>
-                 <p className="text-slate-400">Modo Seguro - {SUPER_ADMIN_EMAIL}</p>
+                 <p className="text-slate-400">Modo Seguro</p>
                </div>
              </div>
              <button 
