@@ -32,5 +32,6 @@ export const ADMIN_EMAILS = [
   'ana.cid@ukuepa.com',
   'dev@ukuepa.com',
   'dev@kuepa.com',
-  'gerito.diseno@gmail.com', // Added requested email
+  'gerito.diseno@gmail.com',
+  'gerardo.diseno@ukuepa.com',
 ];
