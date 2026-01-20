@@ -27,7 +27,7 @@ const App: React.FC = () => {
   // Agrega aquí los correos que quieres que tengan acceso a la Zona Admin (Crear/Borrar Admins)
   const SUPER_ADMIN_EMAILS = [
     'gerardo.rodriguez@kuepa.com',
-    'gerito.diseno@gmail.com' ,
+    'gerito.diseno@gmail.com',
     'gerardo.diseno@ukuepa.com'
   ];
 
